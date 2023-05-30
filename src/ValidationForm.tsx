@@ -55,6 +55,8 @@ function ValidationFrom() {
       {({
         handleSubmit,
         handleChange,
+        handleBlur,
+        setFieldTouched,
         values,
         touched,
         isSubmitting,
@@ -64,6 +66,7 @@ function ValidationFrom() {
           className="mx-auto mt-3 p-3 border border-3 rounded"
           noValidate
           onSubmit={handleSubmit}
+          onChange={() => console.log(touched)}
         >
           <Form.Group className="mb-3" controlId="formBasicUsername">
             <Form.Label>Username</Form.Label>
@@ -72,8 +75,10 @@ function ValidationFrom() {
               placeholder="Enter username"
               value={values.username}
               onChange={handleChange("username")}
+              onFocus={() => {setFieldTouched("username", true)}}
+              // onBlur={handleBlur("username")}
               isValid={touched.username && !errors.username}
-              isInvalid={!!errors.username}
+              isInvalid={touched.username && !!errors.username}
             />
             <Form.Control.Feedback type="invalid">
               {errors.username}
@@ -86,8 +91,9 @@ function ValidationFrom() {
               placeholder="Enter email"
               value={values.email}
               isValid={touched.email && !errors.email}
-              isInvalid={!!errors.email}
+              isInvalid={touched.email && !!errors.email}
               onChange={handleChange("email")}
+              onFocus={() => {setFieldTouched("email", true)}}
             />
             <Form.Control.Feedback type="invalid">
               {errors.email}
@@ -101,8 +107,9 @@ function ValidationFrom() {
                 placeholder="Password"
                 value={values.password}
                 isValid={touched.password && !errors.password}
-                isInvalid={!!errors.password}
+                isInvalid={touched.password && !!errors.password}
                 onChange={handleChange("password")}
+                onFocus={() => {setFieldTouched("password", true)}}
               />
               <InputGroup.Text className="pointer" onClick={handlePassVisibility}>
                   {!showPass ? <AiFillEyeInvisible /> : <AiFillEye />}
