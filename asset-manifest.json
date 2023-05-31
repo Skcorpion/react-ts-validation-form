@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-ts-validation-form/static/css/main.91e11a6a.css",
-    "main.js": "/react-ts-validation-form/static/js/main.08820033.js",
+    "main.js": "/react-ts-validation-form/static/js/main.1dfe3040.js",
     "index.html": "/react-ts-validation-form/index.html",
     "main.91e11a6a.css.map": "/react-ts-validation-form/static/css/main.91e11a6a.css.map",
-    "main.08820033.js.map": "/react-ts-validation-form/static/js/main.08820033.js.map"
+    "main.1dfe3040.js.map": "/react-ts-validation-form/static/js/main.1dfe3040.js.map"
   },
   "entrypoints": [
     "static/css/main.91e11a6a.css",
-    "static/js/main.08820033.js"
+    "static/js/main.1dfe3040.js"
   ]
 }
