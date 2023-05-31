@@ -11,3 +11,10 @@ For this project, there'd be three required inputs for validation:
 
 -   [ ] User should be notified of any invalid inputs by error messages displayed on the form.
 -   [ ] The submit button on the form would never be executed until all entries are validated.
+
+## Used links and resources
+
+- [Regular Expression Library](https://regexr.com/)
+- [React Bootstrap Forms Validation](https://react-bootstrap.github.io/forms/validation/)
+- [Formik docs](https://formik.org/docs/overview)
+- [Yup repository](https://github.com/jquense/yup)
