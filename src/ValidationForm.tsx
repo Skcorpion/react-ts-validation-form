@@ -50,10 +50,10 @@ function ValidationFrom() {
     <Formik
       validationSchema={schema}
       initialValues={{ username: "", email: "", password: "" }}
-      onSubmit={(values, { setSubmitting }) => {
+      onSubmit={(values, { resetForm }) => {
         setTimeout(() => {
           alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
+          resetForm();
         }, 400);
       }}
     >
